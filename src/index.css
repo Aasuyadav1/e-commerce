@@ -1,15 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.active{
-    color: rgb(128,78,221);
+.active {
+  color: rgb(128, 78, 221);
 }
-::-webkit-scrollbar{
-    width: 0px ;
-
+::-webkit-scrollbar {
+  width: 0px;
 }
-*{
-    user-select: none;
+* {
+  user-select: none;
 }
 
 /* ::-webkit-scrollbar-thumb{
@@ -18,59 +17,65 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 } */
-.cart{
-    user-select: none;
+.cart {
+  user-select: none;
 }
-.cart::-webkit-scrollbar{
-    width: 10px ;
-    background-color: transparent;
-
+.cart::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
 }
-.cart::-webkit-scrollbar-thumb{
-    background-color: #176272;
-    width: 5px;
-    border-radius: 10px;
+.cart::-webkit-scrollbar-thumb {
+  background-color: #176272;
+  width: 5px;
+  border-radius: 10px;
 }
-.sug::-webkit-scrollbar{
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    overflow: hidden;
+.sug::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  overflow: hidden;
 }
-.sug::-webkit-scrollbar-thumb{
-    background-color: #176272;
-    height: 10px;
-    border-radius: 10px;
+.sug::-webkit-scrollbar-thumb {
+  background-color: #176272;
+  height: 10px;
+  border-radius: 10px;
 }
-.footer-ev{
-    background: rgb(237,168,99);
-     background: linear-gradient(143deg, rgba(237,168,99,1) 0%, rgba(149,49,35,1) 100%);
+.footer-ev {
+  background: rgb(237, 168, 99);
+  background: linear-gradient(
+    143deg,
+    rgba(237, 168, 99, 1) 0%,
+    rgba(149, 49, 35, 1) 100%
+  );
 }
-.footer-eve{
-    background: rgb(195,160,78);
-background: linear-gradient(143deg, rgba(195,160,78,1) 0%, rgba(234,220,149,1) 100%);
+.footer-eve {
+  background: rgb(195, 160, 78);
+  background: linear-gradient(
+    143deg,
+    rgba(195, 160, 78, 1) 0%,
+    rgba(234, 220, 149, 1) 100%
+  );
 }
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #144452;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 48px;
+  height: 48px;
+  border: 5px solid #144452;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-    .react-slideshow-container .nav {
-        z-index: 1;
-       
-    }
+.react-slideshow-container .nav {
+  z-index: 1;
+}

@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Contextdata } from '../contextapi/Contextapi';
+import React, { useContext, useState, useEffect } from "react";
+import { Contextdata } from "../contextapi/Contextapi";
 
 function Filterproduct() {
   const { productData, setProductData } = useContext(Contextdata);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [originalProductData, setOriginalProductData] = useState(productData);
 
   // useEffect(() => {
@@ -13,22 +13,25 @@ function Filterproduct() {
 
   const filter = (e) => {
     const category = e.target.value;
-  
-    if (category === 'all') {
-      // If 'all' is selected, set the product data to the original data
+
+    if (category === "all") {
       setProductData(originalProductData);
-      setSelectedCategory('all');
+      setSelectedCategory("all");
     } else {
-      // Filter data based on the selected category without modifying the original data
-      const filteredData = [...originalProductData].filter((cur) => cur.category === category);
+      const filteredData = [...originalProductData].filter(
+        (cur) => cur.category === category
+      );
       setProductData(filteredData);
       setSelectedCategory(category);
     }
   };
-  
+
   return (
     <div>
-      <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      <label
+        htmlFor="countries"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >
         Select an option
       </label>
       <select

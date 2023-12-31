@@ -4,16 +4,17 @@ import axios from "axios";
 export const featuproductApi = createContext();
 
 const FeatureProductProvider = (props) => {
-  const api = 'https://fakestoreapi.com/products';
+  const api = "https://fakestoreapi.com/products";
   const [productData, setProductData] = useState(null);
 
   const getApi = async (url) => {
     try {
       let response = await axios.get(url);
       let resconvData = response.data;
-      setProductData(resconvData);
+      let updatedData = resconvData.map((cur) => ({ ...cur, quantity: 1 }));
+      setProductData(updatedData);
     } catch (error) {
-      console.log("Error fetching data featured context:", error);
+      console.log("Error fetching data from featured context:", error);
     }
   };
 
